@@ -1,7 +1,12 @@
 from fastapi import FastAPI
 from app.config import LLM_MODEL
+from app.chatbots.routes import router as chatbot_router
+from app.ingestion.routes import router as ingestion_router
 
 app = FastAPI(title="RAG Platform Backend")
+
+app.include_router(chatbot_router)
+app.include_router(ingestion_router)
 
 @app.get("/health")
 def health():

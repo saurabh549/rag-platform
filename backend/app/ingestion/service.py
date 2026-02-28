@@ -19,4 +19,4 @@ def ingest_file(file_path: str, chatbot_id: int):
 
     # 4. Store
     vectordb.add_documents(chunks)
-    vectordb.persist()
+    # vectordb.persist()

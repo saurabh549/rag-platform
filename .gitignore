@@ -7,5 +7,7 @@ __pycache__/
 env/
 venv/
 ENV/
-uploads/
-vectorstores/
+*venv/
+.vscode/
+*uploads/
+*vectorstore/
